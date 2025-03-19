@@ -7,7 +7,7 @@ public class Homework {
         System.out.println(numberFive(5, 7));
         numberSix(6);
         System.out.println(numberSeven(7));
-        numberEight(4);
+        numberEight("Vodka", 3);
         System.out.println(numberNine(2017));
         numberTen();
         numberEleven();
@@ -79,23 +79,23 @@ public class Homework {
 
     public static boolean numberSeven(int a) {
         System.out.println("Задание 7.");
-        if (a < 0) {
+        if (a >= 0) {
             return true;
         } else {
             return false;
         }
     }
 
-    public static void numberEight(int a) {
+    public static void numberEight(String str, int a) {
         System.out.println("Задание 8.");
         for (int i = 0; i < a; i++) {
-            System.out.println("Vodka");
+            System.out.println(str);
         }
     }
 
     public static boolean numberNine(int year) {
         System.out.println("Задание 9.");
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             return true;
         } else {
             return false;
@@ -117,9 +117,10 @@ public class Homework {
 
     public static void numberEleven() {
         System.out.println("Задание 11.");
-        int [] arr = new int[100];
+        int [] arr = new int[10];
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(i + " ");
+            arr[i] = 5;
+            System.out.println(arr[i] + " ");
         }
     }
 
